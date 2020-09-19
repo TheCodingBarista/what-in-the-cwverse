@@ -1,9 +1,9 @@
 class ShowsController < ApplicationController
     def index
-        shows = Show.all
+        render json: Show.all
     end
 
     def show
-        
+        render json: Show.find(params[:id])       
     end
 end
