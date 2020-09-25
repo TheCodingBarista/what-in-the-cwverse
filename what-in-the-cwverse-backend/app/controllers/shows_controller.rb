@@ -1,9 +1,22 @@
 class ShowsController < ApplicationController
+    before_action :set_show, only: :show
+    
     def index
-        render json: Show.all
+        shows = Show.all
+        render json: shows
     end
 
     def show
-        render json: Show.find(params[:id])       
+        render json: @show      
+    end
+
+    private
+
+    def set_show
+        @show = Show.find(params[:id])
+    end
+
+    def show_params
+        params.require(:show).permit(:title, :description)
     end
 end
