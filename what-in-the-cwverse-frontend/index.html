@@ -1,189 +1,381 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title>What in the CWverse?</title>
-    <link href="https://fonts.googleapis.com/css2?family=Imbue:wght@500&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" integrity="sha512-+4zCK9k+qNFUR5X+cKL9EIR+ZOhtIloNl9GIKS57V1MyNsYpYcUrUeQc9vNfzsWfV28IaLL3i96P9sdNyeRssA==" crossorigin="anonymous" />
-    <link rel="stylesheet" href="css/style.css" type="text/css" media="all">
-    <script type="text/javascript" src="js/jquery-1.4.2.min.js"></script>
-    <script type="text/javascript" src="js/jquery-func.js"></script>
-    <script type="application/javascript" src="src/index.js" charset="UTF-8"></script>
-  </head>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <title>What In The CWverse?</title>
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.11.2/css/all.css">
+  <!-- Bootstrap core CSS -->
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <!-- Material Design Bootstrap -->
+  <link href="css/mdb.min.css" rel="stylesheet">
+  <!-- Your custom styles (optional) -->
+  <link href="css/style.min.css" rel="stylesheet">
+</head>
+
 <body>
-<div id="shell">
-  <div id="header">
-    <h1>What In the CWverse?</h1>
-    <div id="navigation">
-      <ul>
-        <li><a class="active" href="#">Home</a></li>
-        <li><a href="#">Characters</a></li>
-        <li><a href="#">Shows</a></li>
-        <li><a href="#">Timeline</a></li>
-        <li><a href="#">About the CWverse</a></li>
-      </ul>
-    </div>
-    <br><br>
 
-<!--    <div class="social"> <span>FOLLOW US ON:</span>
-      <ul>
-        <li><a class="twitter" href="#">twitter</a></li>
-        <li><a class="facebook" href="#">facebook</a></li>
-        <li><a class="vimeo" href="#">vimeo</a></li>
-        <li><a class="rss" href="#">rss</a></li>
-      </ul>
-    </div> -->
+<style type="text/css">
+   body { color: white;
+   background:#444b59; }
+</style>
 
-    <!-- <!-- <div id="sub-navigation">
-      <ul>
-        <li><a href="#">All Shows</a></li>
-        <li><a href="#">My Shows</a></li>
-        <li><a href="#">Characters</a></li>
-        <li><a href="#">CWverse</a></li>
-      </ul>
-      <div id="search">
-        <form action="#" method="get" accept-charset="utf-8">
-          <label for="search-field">SEARCH</label>
-          <input type="text" name="search field" value="Enter search here" id="search-field" class="blink search-field"  />
-          <input type="submit" value="GO!" class="search-button" />
-        </form>
+  <!-- Main Navigation-->
+  <header>
+    <style type="text/css">
+      nav-item { color: white !important; }
+    </style>
+    <!-- Navbar -->
+    <nav class="navbar fixed-top navbar-expand-lg navbar-light white scrolling-navbar">
+      <div class="container">
+        <div id="all-shows">
+          
+        </div>
+
+
+
+
+
+
+
+
+        <!-- Brand -->
+        <a class="navbar-brand waves-effect" href="https://github.com/TheCodingBarista/money-moves" target="_blank">
+          <strong class="blue-text">What in the CWverse?</strong>
+        </a>
+
+        <!-- Collapse -->
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <!-- Links -->
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+          <!-- Left -->
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link waves-effect" href="/">Home
+                <span class="sr-only">(current)</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link waves-effect" href="/register/sign_up">Sign Up</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link waves-effect" href="/login">Log In</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link waves-effect" href="/entries">Shows</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link waves-effect" href="https://mdbootstrap.com/education/bootstrap/">Free tutorials</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link waves-effect" href="/logout">Logout</a>
+            </li>
+          </ul>
+
+          <!-- Right -->
+          <ul class="navbar-nav nav-flex-icons">
+            <li class="nav-item">
+              <a href="https://twitter.com/NotYourAvgMel" class="nav-link waves-effect" target="_blank">
+                <i class="fab fa-twitter"></i> NotYourAvgMel
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="https://github.com/TheCodingBarista" class="nav-link waves-effect"
+                target="_blank">
+                <i class="fab fa-github mr-2"></i>The Coding Barista
+              </a>
+            </li>
+          </ul>
+
+        </div>
+
       </div>
-    </div>
-  </div>
-  <div id="main">
-    <div id="content">
-      <div class="box">
-        <div class="head">
-          <h2>All Shows</h2>
-          <p class="text-right"><a href="#">See all</a></p>
-        </div>
-        <div class="movie">
-          <div class="movie-image"> <span class="play"><span class="name">X-MAN</span></span> <a href="#"><img src="css/images/movie1.jpg" alt="" /></a> </div>
-          <div class="rating">
-            <p>RATING</p>
-            <span class="comments">12</span> </div>
-        </div>
-        <div class="movie">
-          <div class="movie-image"> <span class="play"><span class="name">SPIDER MAN 2</span></span> <a href="#"><img src="css/images/movie2.jpg" alt="" /></a> </div>
+    </nav>
+    <!-- Navbar -->
 
-            <span class="comments">12</span> </div>
-        </div>
-        <div class="movie">
-          <div class="movie-image"> <span class="play"><span class="name">VALKYRIE</span></span> <a href="#"><img src="css/images/movie4.jpg" alt="" /></a> </div>
-          <div class="rating">
-            <p>RATING</p>
-            <div class="stars">
-              <div class="stars-in"> </div>
-            </div>
-            <span class="comments">12</span> </div>
-        </div>
+  </header>
+  <!--Main Navigation-->
 
-        <div class="movie last">
-          <div class="movie-image"> <span class="play"><span class="name">ICE AGE</span></span> <a href="#"><img src="css/images/movie6.jpg" alt="" /></a> </div>
-          <div class="rating">
-            <p>RATING</p>
-            <div class="stars">
-              <div class="stars-in"> </div>
+  <!--Main layout-->
+  <main class="mt-5 pt-5">
+    <div class="container">
+
+      <!--Section: Jumbotron-->
+      <section class="card wow fadeIn" style="background-image: url(https://mdbootstrap.com/img/Photos/Others/background3.jpg)">
+        <!-- Content -->
+        <div class="card-body text-white text-center py-5 px-5 my-5">          
+          <h1 class="mb-4">
+            <strong>Welcome!</strong>
+          </h1>
+          <p>
+            <strong></strong>
+          </p>
+          <p class="mb-4">
+            <strong>Here to help you figure out who's who in the CWverse</strong>
+          </p>
+          <a target="_blank" href="https://github.com/TheCodingBarista/money-moves" class="btn btn-outline-white btn-lg">View this project on GitHub
+            <i class="fab fa-github mr-3"></i>
+          </a>
+
+        </div>
+        <!-- Content -->
+      </section>
+      <!--Section: Jumbotron-->
+
+      <hr class="my-5">
+
+      <!--Section: Magazine v.1-->
+      <section class="wow fadeIn">
+
+        <!--Section heading-->
+        <h2 class="h1 text-center my-5 font-weight-bold">Our Favorites</h2>
+
+        <!--Grid row-->
+        <div class="row text-left">
+
+          <!--Grid column-->
+          <div class="col-lg-6 col-md-12">
+
+            <!--Image-->
+            <div class="view overlay rounded z-depth-1-half mb-3">
+              <a href="https://www.amazon.com/Broke-Millennial-Scraping-Financial-Together/dp/0143130404/ref=sr_1_2?crid=3T1MOON6I69H0&dchild=1&keywords=broke+millennial&qid=1596407129&s=books&sprefix=broke+mill%2Caps%2C232&sr=1-2">
+                <img src="https://images-na.ssl-images-amazon.com/images/I/41GkorDWQTL._SX331_BO1,204,203,200_.jpg" class="img-fluid" alt="Sample post image">
+              </a>
+              <a>
+                <div class="mask rgba-white-slight"></div>
+              </a>
             </div>
-            <span class="comments">12</span> </div>
-        </div>
-        <div class="cl">&nbsp;</div>
-      </div> -->
-      <div class="box">
-        <div class="head">
-          <h2>My Shows</h2>
-          <p class="text-right"><a href="#">See all</a></p>
-        </div>
-        <div class="movie">
-          <div class="movie-image"> <span class="play"><span class="name">TRANSFORMERS</span></span> <a href="#"><img src="css/images/movie7.jpg" alt="" /></a> </div>
-          <div class="rating">
-            <p>RATING</p>
-            <div class="stars">
-              <div class="stars-in"> </div>
+
+            <!--Excerpt-->
+            <div class="news-data">
+              <a href="https://twitter.com/BrokeMillennial" class="light-blue-text">
+                <h6>
+                  <i class="fab fa-twitter mr-3"></i>
+                  <strong> Check out Broke Millennial on Twitter</strong>
+                </h6>
+              </a>
             </div>
-            <span class="comments">12</span> </div>
-        </div>
-        <div class="movie">
-          <div class="movie-image"> <span class="play"><span class="name">MAGNETO</span></span> <a href="#"><img src="css/images/movie8.jpg" alt="" /></a> </div>
-          <div class="rating">
-            <p>RATING</p>
-            <div class="stars">
-              <div class="stars-in"> </div>
+            <br>
+            <div>
+          </div>
+            <!--/Featured news-->
+
+            <hr>
+
+            <!--Small news-->
+            <div class="row">
+              <div class="col-md-3">
+
+                <!--Image-->
+                <div class="view overlay rounded z-depth-1">
+                  <img src="https://mdbootstrap.com/img/Photos/Others/photo8.jpg" class="img-fluid" alt="Minor sample post image">
+                  <a>
+                    <div class="mask rgba-white-slight"></div>
+                  </a>
+                </div>
+              </div>
+               <%= render "small", locals: {entries: @entries} %>
             </div>
-            <span class="comments">12</span> </div>
-        </div>
-        <div class="movie">
-          <div class="movie-image"> <span class="play"><span class="name">NARNIA</span></span> <a href="#"><img src="css/images/movie11.jpg" alt="" /></a> </div>
-          <div class="rating">
-            <p>RATING</p>
-            <div class="stars">
-              <div class="stars-in"> </div>
+            <!--/Small news-->
+
+            <hr>
+
+            <!--Small news-->
+            <div class="row">
+              <div class="col-md-3">
+
+                <!--Image-->
+                <div class="view overlay rounded z-depth-1">
+                  <img src="https://mdbootstrap.com/img/Photos/Others/images/54.jpg" class="img-fluid" alt="Minor sample post image">
+                  <a>
+                    <div class="mask rgba-white-slight"></div>
+                  </a>
+                </div>
+              </div>
+               <%= render "small", locals: {entries: @entries} %>
             </div>
-            <span class="comments">12</span> </div>
-        </div>
-        <div class="movie last">
-          <div class="movie-image"> <span class="play"><span class="name">ANGELS &amp; DEMONS</span></span> <a href="#"><img src="css/images/movie12.jpg" alt="" /></a> </div>
-          <div class="rating">
-            <p>RATING</p>
-            <div class="stars">
-              <div class="stars-in"> </div>
+
+            <hr>
+            <!--/Small news-->
+
+            <!--Small news-->
+            <div class="row">
+              <div class="col-md-3">
+
+                <!--Image-->
+                <div class="view overlay rounded z-depth-1">
+                  <img src="https://mdbootstrap.com/img/Photos/Others/images/49.jpg" class="img-fluid" alt="Minor sample post image">
+                  <a>
+                    <div class="mask rgba-white-slight"></div>
+                  </a>
+                </div>
+              </div>
+               <%= render "small", locals: {entries: @entries} %>
             </div>
-            <span class="comments">12</span> </div>
+            <!--/Small news-->
+
+            <hr>
+
+          </div>
+          <!--Grid column-->
+
+          <!--Grid column-->
+          <div class="col-lg-6 col-md-12">
+
+            <!--Image-->
+            <div class="view overlay rounded z-depth-1-half mb-3">
+              <a href="https://www.amazon.com/Simple-Path-Wealth-financial-independence/dp/1533667926/ref=sr_1_2?crid=2JUQ2EONBXDJ3&dchild=1&keywords=simple+path+to+wealth&qid=1596407213&s=books&sprefix=simple+%2Cstripbooks%2C220&sr=1-2">
+                <img src="https://images-na.ssl-images-amazon.com/images/I/41oX+Lk2-ML._SX322_BO1,204,203,200_.jpg" class="img-fluid" alt="Sample post image">
+              </a>
+              <a>
+                <div class="mask rgba-white-slight"></div>
+              </a>
+            </div>
+
+            <!--Excerpt-->
+            <div class="news-data">
+              <a href="https://twitter.com/JLCollinsNH" class="light-blue-text">
+                <h6>
+                  <i class="fab fa-twitter mr-3"></i>
+                  <strong> Learn more about JL Collins</strong>
+                </h6>
+              </a>
+              <br>
+            </div>
+            <div>
+              <%= render "featured", locals: {entries: @entries} %>
+            </div>
+          
+          <hr>
+            <!--/Featured news-->
+
+            <!--Small news-->
+            <div class="row">
+              <div class="col-md-3">
+
+                <!--Image-->
+                <div class="view overlay rounded z-depth-1">
+                  <img src="https://mdbootstrap.com/img/Photos/Others/photo11.jpg" class="img-fluid" alt="Minor sample post image">
+                  <a>
+                    <div class="mask rgba-white-slight"></div>
+                  </a>
+                </div>
+              </div>
+              <%= render "small", locals: {entries: @entries} %>
+            </div>
+
+            <hr>
+            <!--/Small news-->
+
+            <!--Small news-->
+            <div class="row">
+              <div class="col-md-3">
+
+                <!--Image-->
+                <div class="view overlay rounded z-depth-1">
+                  <img src="https://mdbootstrap.com/img/Photos/Others/images/51.jpg" class="img-fluid" alt="Minor sample post image">
+                  <a>
+                    <div class="mask rgba-white-slight"></div>
+                  </a>
+                </div>
+              </div>
+               <%= render "small", locals: {entries: @entries} %>
+            </div>
+            <!--/Small news-->
+
+            <hr>
+            <!--Small news-->
+            <div class="row">
+              <div class="col-md-3">
+
+                <!--Image-->
+                <div class="view overlay rounded z-depth-1">
+                  <img src="https://mdbootstrap.com/img/Photos/Others/images/44.jpg" class="img-fluid" alt="Minor sample post image">
+                  <a>
+                    <div class="mask rgba-white-slight"></div>
+                  </a>
+                </div>
+              </div>
+               <%= render "small", locals: {entries: @entries} %>
+            </div>
+            <!--/Small news-->
+
+            <hr>
+          <!--Grid column-->
+
         </div>
-        <div class="cl">&nbsp;</div>
-      </div> 
-    <!-- <div id="news">
-      <div class="head">
-        <h3>NEWS</h3>
-        <p class="text-right"><a href="#">See all</a></p>
-      </div>
-      <div class="content">
-        <p class="date">12.04.09</p>
-        <h4>Disney's A Christmas Carol</h4>
-        <p>&quot;Disney's A Christmas Carol,&quot; a multi-sensory thrill ride re-envisioned by Academy Award&reg;-winning filmmaker Robert Zemeckis, captures... </p>
-        <a href="#">Read more</a> </div>
-      <div class="content">
-        <p class="date">11.04.09</p>
-        <h4>Where the Wild Things Are</h4>
-        <p>Innovative director Spike Jonze collaborates with celebrated author Maurice Sendak to bring one of the most beloved books of all time to the big screen in &quot;Where the Wild Things Are,&quot;...</p>
-        <a href="#">Read more</a> </div>
-      <div class="content">
-        <p class="date">10.04.09</p>
-        <h4>The Box</h4>
-        <p>Norma and Arthur Lewis are a suburban couple with a young child who receive an anonymous gift bearing fatal and irrevocable consequences.</p>
-        <a href="#">Read more</a> </div>
+        <!--Grid row-->
+
+      </section>
+      <!--/Section: Magazine v.1-->
+
+
     </div>
-    <div id="coming">
-      <div class="head">
-        <h3>COMING SOON<strong>!</strong></h3>
-        <p class="text-right"><a href="#">See all</a></p>
-      </div>
-      <div class="content">
-        <h4>The Princess and the Frog </h4>
-        <a href="#"><img src="css/images/coming-soon1.jpg" alt="" /></a>
-        <p>Walt Disney Animation Studios presents the musical &quot;The Princess and the Frog,&quot; an animated comedy set in the great city of New Orleans...</p>
-        <a href="#">Read more</a> </div>
-      <div class="cl">&nbsp;</div>
-      <div class="content">
-        <h4>The Princess and the Frog </h4>
-        <a href="#"><img src="css/images/coming-soon2.jpg" alt="" /></a>
-        <p>Walt Disney Animation Studios presents the musical &quot;The Princess and the Frog,&quot; an animated comedy set in the great city of New Orleans...</p>
-        <a href="#">Read more</a> </div>
+  </main>
+  <!--Main layout-->
+
+  <!--Footer-->
+  <footer class="page-footer text-center font-small mdb-color darken-2 mt-4 wow fadeIn">
+
+    <!--Call to action-->
+    <div class="pt-4">
+      <a class="btn btn-outline-white" href="https://mdbootstrap.com/freebies/jquery/magazine/" target="_blank"
+        role="button">Check out this template here
+        <i class="fas fa-download ml-2"></i>
+      </a>
+      <a class="btn btn-outline-white" href="https://github.com/TheCodingBarista/what-in-the-cwverse" target="_blank" role="button">View the code on GitHub
+        <i class="fab fa-github mr-3"></i>
+      </a>
     </div>
-    <div class="cl">&nbsp;</div>
-    <a style="text-decoration: none; color: green;" href="https://screenrant.com/arrowverse-timeline-shows-crossovers-explained/">
-      <img src="https://static0.srcdn.com/wordpress/wp-content/uploads/2020/08/Arrowverse-Timeline.jpg?q=50&fit=crop&w=963&h=481&dpr=1.5" class="img-fluid" alt="Sample post image" style="width: 600px;">
-      <div style="width: 600px; text-align: center;">Source: Screenrant</div>  
-    </a>
-  </div> -->
-  <div id="footer">
-    <p class="lf">Copyright &copy; 2021 <a href="#">What In The CWverse?</a> - All Rights Reserved</p>
-    <p class="rf"><a href="http://chocotemplates.com/">Get the template here</a></p>
-    <div style="clear:both;"></div>
-  </div>
-</div>
-<script src="src/index.js" charset="UTF-8"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+    <!--/.Call to action-->
+
+    <hr class="my-4">
+
+    <!-- Social icons -->
+    <div class="pb-4">
+
+
+      <a href="https://twitter.com/NotYourAvgMel" target="_blank">
+        <i class="fab fa-twitter mr-3"></i>
+      </a>
+
+      <a href="https://github.com/TheCodingBarista" target="_blank">
+        <i class="fab fa-github mr-3"></i>
+      </a>
+
+    </div>
+    <!-- Social icons -->
+
+    <!--Copyright-->
+    <div class="footer-copyright py-3">
+      <strong>What in the CWverse?, 2021</strong><br><br>
+      brought to you by:
+      <br>
+      <a href="https://github.com/TheCodingBarista" target="_blank">The Coding Barista </a>
+    </div>
+    <!--/.Copyright-->
+
+  </footer>
+  <!--/.Footer-->
+
+  <!-- SCRIPTS -->
+  <!-- JQuery -->
+  
+  <!-- MDB core JavaScript -->
+  <!-- Initializations -->
+  <script src="src/index.js">
+  <script src="src/show.js">
+ 
+   // Animations initialization
+    new WOW().init();
 </body>
+
 </html>

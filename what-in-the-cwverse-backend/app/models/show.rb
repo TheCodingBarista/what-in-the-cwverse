@@ -10,6 +10,6 @@ class Show < ApplicationRecord
                 :title => response["results"][0]["name"],
                 :description => response["results"][0]["deck"] || response["results"][0]["description"]
             )
-        end
+        end    
     end            
 end
