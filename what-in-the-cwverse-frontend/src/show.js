@@ -23,6 +23,7 @@ function getShows() {
   function renderShows(data) {
     let showsIndex = document.getElementById("all-shows")
     data.forEach((show) => {
+      console.log(show)
       let newShow = new Show(show)
       showsIndex.innerHTML += newShow.displayShow()
     });

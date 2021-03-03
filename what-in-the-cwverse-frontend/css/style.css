@@ -1,2 +1,8 @@
 .card-comments img {
   width: 4rem; }
+
+.news-data {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
