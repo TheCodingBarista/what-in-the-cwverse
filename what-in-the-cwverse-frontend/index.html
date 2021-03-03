@@ -20,28 +20,18 @@
 
 <style type="text/css">
    body { color: white;
-   background:#444b59; }
+   background:#444b59 !important; }
 </style>
 
   <!-- Main Navigation-->
   <header>
-    <style type="text/css">
-      nav-item { color: white !important; }
-    </style>
+
     <!-- Navbar -->
     <nav class="navbar fixed-top navbar-expand-lg navbar-light white scrolling-navbar">
       <div class="container">
-        <div id="all-shows">
-          
-        </div>
+          <div id="all-shows">
 
-
-
-
-
-
-
-
+          </div>
         <!-- Brand -->
         <a class="navbar-brand waves-effect" href="https://github.com/TheCodingBarista/money-moves" target="_blank">
           <strong class="blue-text">What in the CWverse?</strong>
@@ -70,13 +60,13 @@
               <a class="nav-link waves-effect" href="/login">Log In</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link waves-effect" href="/entries">Shows</a>
+              <a class="nav-link waves-effect" href="">Shows</a>
             </li>
             <li class="nav-item">
               <a class="nav-link waves-effect" href="https://mdbootstrap.com/education/bootstrap/">Free tutorials</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link waves-effect" href="/logout">Logout</a>
+              <a class="nav-link waves-effect" href="">Logout</a>
             </li>
           </ul>
 
@@ -94,15 +84,13 @@
               </a>
             </li>
           </ul>
-
         </div>
-
       </div>
     </nav>
     <!-- Navbar -->
 
   </header>
-  <!--Main Navigation-->
+  <!--Main Navigation -->
 
   <!--Main layout-->
   <main class="mt-5 pt-5">
@@ -115,9 +103,6 @@
           <h1 class="mb-4">
             <strong>Welcome!</strong>
           </h1>
-          <p>
-            <strong></strong>
-          </p>
           <p class="mb-4">
             <strong>Here to help you figure out who's who in the CWverse</strong>
           </p>
@@ -170,64 +155,7 @@
 
             <hr>
 
-            <!--Small news-->
-            <div class="row">
-              <div class="col-md-3">
-
-                <!--Image-->
-                <div class="view overlay rounded z-depth-1">
-                  <img src="https://mdbootstrap.com/img/Photos/Others/photo8.jpg" class="img-fluid" alt="Minor sample post image">
-                  <a>
-                    <div class="mask rgba-white-slight"></div>
-                  </a>
-                </div>
-              </div>
-               <%= render "small", locals: {entries: @entries} %>
-            </div>
-            <!--/Small news-->
-
-            <hr>
-
-            <!--Small news-->
-            <div class="row">
-              <div class="col-md-3">
-
-                <!--Image-->
-                <div class="view overlay rounded z-depth-1">
-                  <img src="https://mdbootstrap.com/img/Photos/Others/images/54.jpg" class="img-fluid" alt="Minor sample post image">
-                  <a>
-                    <div class="mask rgba-white-slight"></div>
-                  </a>
-                </div>
-              </div>
-               <%= render "small", locals: {entries: @entries} %>
-            </div>
-
-            <hr>
-            <!--/Small news-->
-
-            <!--Small news-->
-            <div class="row">
-              <div class="col-md-3">
-
-                <!--Image-->
-                <div class="view overlay rounded z-depth-1">
-                  <img src="https://mdbootstrap.com/img/Photos/Others/images/49.jpg" class="img-fluid" alt="Minor sample post image">
-                  <a>
-                    <div class="mask rgba-white-slight"></div>
-                  </a>
-                </div>
-              </div>
-               <%= render "small", locals: {entries: @entries} %>
-            </div>
-            <!--/Small news-->
-
-            <hr>
-
-          </div>
-          <!--Grid column-->
-
-          <!--Grid column-->
+            
           <div class="col-lg-6 col-md-12">
 
             <!--Image-->
@@ -250,70 +178,11 @@
               </a>
               <br>
             </div>
-            <div>
-              <%= render "featured", locals: {entries: @entries} %>
-            </div>
           
           <hr>
             <!--/Featured news-->
 
-            <!--Small news-->
-            <div class="row">
-              <div class="col-md-3">
-
-                <!--Image-->
-                <div class="view overlay rounded z-depth-1">
-                  <img src="https://mdbootstrap.com/img/Photos/Others/photo11.jpg" class="img-fluid" alt="Minor sample post image">
-                  <a>
-                    <div class="mask rgba-white-slight"></div>
-                  </a>
-                </div>
-              </div>
-              <%= render "small", locals: {entries: @entries} %>
-            </div>
-
-            <hr>
-            <!--/Small news-->
-
-            <!--Small news-->
-            <div class="row">
-              <div class="col-md-3">
-
-                <!--Image-->
-                <div class="view overlay rounded z-depth-1">
-                  <img src="https://mdbootstrap.com/img/Photos/Others/images/51.jpg" class="img-fluid" alt="Minor sample post image">
-                  <a>
-                    <div class="mask rgba-white-slight"></div>
-                  </a>
-                </div>
-              </div>
-               <%= render "small", locals: {entries: @entries} %>
-            </div>
-            <!--/Small news-->
-
-            <hr>
-            <!--Small news-->
-            <div class="row">
-              <div class="col-md-3">
-
-                <!--Image-->
-                <div class="view overlay rounded z-depth-1">
-                  <img src="https://mdbootstrap.com/img/Photos/Others/images/44.jpg" class="img-fluid" alt="Minor sample post image">
-                  <a>
-                    <div class="mask rgba-white-slight"></div>
-                  </a>
-                </div>
-              </div>
-               <%= render "small", locals: {entries: @entries} %>
-            </div>
-            <!--/Small news-->
-
-            <hr>
-          <!--Grid column-->
-
-        </div>
-        <!--Grid row-->
-
+ 
       </section>
       <!--/Section: Magazine v.1-->
 
@@ -341,8 +210,6 @@
 
     <!-- Social icons -->
     <div class="pb-4">
-
-
       <a href="https://twitter.com/NotYourAvgMel" target="_blank">
         <i class="fab fa-twitter mr-3"></i>
       </a>
@@ -350,32 +217,35 @@
       <a href="https://github.com/TheCodingBarista" target="_blank">
         <i class="fab fa-github mr-3"></i>
       </a>
-
     </div>
     <!-- Social icons -->
 
     <!--Copyright-->
     <div class="footer-copyright py-3">
-      <strong>What in the CWverse?, 2021</strong><br><br>
+      <strong>What in the CWverse? 2021</strong><br><br>
       brought to you by:
       <br>
       <a href="https://github.com/TheCodingBarista" target="_blank">The Coding Barista </a>
     </div>
     <!--/.Copyright-->
-
   </footer>
   <!--/.Footer-->
 
   <!-- SCRIPTS -->
   <!-- JQuery -->
-  
+  <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+  <!-- Bootstrap tooltips -->
+  <script type="text/javascript" src="js/popper.min.js"></script>
+  <!-- Bootstrap core JavaScript -->
+  <script type="text/javascript" src="js/bootstrap.min.js"></script>
   <!-- MDB core JavaScript -->
+  <script type="text/javascript" src="js/mdb.min.js"></script>
   <!-- Initializations -->
-  <script src="src/index.js">
-  <script src="src/show.js">
- 
-   // Animations initialization
+  <script type="text/javascript">
+    // Animations initialization
     new WOW().init();
+  </script>
+  <script type="text/javascript" src="src/show.js"></script>
+  <script type="text/javascript" src="src/index.js"></script>
 </body>
-
 </html>
