@@ -17,10 +17,9 @@ function getShows() {
   
   Show.prototype.displayCharacters = function() {
     let allCharacters = this.characters.map(character => {
-      return (`<div id="${character.id}">
+      return (`<div class="show-card column">
           <h4>${character.alias}</h4><br>
           <p>${character.name}</p>
-   
           <p> Powers:
             ${character.powerstats} 
           </p> 
@@ -32,14 +31,12 @@ function getShows() {
   }
 
   Show.prototype.displayShow = function() {
-    return `<div class="show-card column">
+    return `<div class="show-card column" id="${this.id}">
             <h4 class="show-title">${this.title}</h4><br></br>
             <img src="${this.image_url}">
             <br><br>
             <p style="font-size:12px;">${this.description}</p><br></br>
-            <button onClick="">Meet the Characters</button>
-            <div id="show-characters">
-            </div>
+            <button style="background-color:black; color:white;" class="characters-button">Meet the Characters</button>
           </div>`
   }
 
@@ -49,5 +46,6 @@ function getShows() {
       console.log(show)
       let newShow = new Show(show)
       showsIndex.innerHTML += newShow.displayShow()
+      showsIndex.innerHTML += newShow.displayCharacters()
     });
   }
