@@ -28,8 +28,9 @@ Character.destroy_all
         response = JSON.parse(RestClient.get("https://www.comicvine.com/api/character/4005-#{id}/?api_key=3f76c9a84c976ae891f3ae40cbb2526dd6fac07b&field_list=real_name,powers,name,deck,image,api_detail_url&format=json").body)
         arrow_powers = []
         @arrow_powers = response["results"]["powers"]
-        @arrow_powers.each do |power|
-          arrow_powers << power["name"]
+        first_five = @arrow_powers[0..4]
+        first_five.each do |power|
+          arrow_powers << ' ' + power["name"]
         end
 
         character = Character.create!(
@@ -45,8 +46,9 @@ Character.destroy_all
         response = JSON.parse(RestClient.get("https://www.comicvine.com/api/character/4005-#{id}/?api_key=3f76c9a84c976ae891f3ae40cbb2526dd6fac07b&field_list=real_name,powers,name,deck,image,api_detail_url&format=json").body)
         flash_powers = []
         @flash_powers = response["results"]["powers"]
-        @flash_powers.each do |power|
-          flash_powers << power["name"]
+        first_five = @flash_powers[0..4]
+        first_five.each do |power|          
+            flash_powers << ' ' + power["name"]
         end
 
         character = Character.create!(
@@ -62,8 +64,9 @@ Character.destroy_all
         response = JSON.parse(RestClient.get("https://www.comicvine.com/api/character/4005-#{id}/?api_key=3f76c9a84c976ae891f3ae40cbb2526dd6fac07b&field_list=real_name,powers,name,deck,image,api_detail_url&format=json").body)
         super_powers = []
         @super_powers = response["results"]["powers"]
-        @super_powers.each do |power|
-          super_powers << power["name"]
+        first_five = @super_powers[0..4]
+        first_five.each do |power|
+          super_powers <<  ' ' + power["name"]
         end
         
         character = Character.create!(
