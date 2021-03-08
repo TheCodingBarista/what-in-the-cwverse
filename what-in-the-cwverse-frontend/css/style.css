@@ -11,6 +11,7 @@
 
   img{
     height: 12rem;
+    border: 3px white solid;
   }
   
   /* Float four columns side by side */

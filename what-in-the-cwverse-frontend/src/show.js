@@ -15,37 +15,19 @@ function getShows() {
     //.then(data => console.log(data))
   }
   
-  Show.prototype.displayCharacters = function() {
-    let allCharacters = this.characters.map(character => {
-      return (`<div class="show-card column">
-          <h4>${character.alias}</h4><br>
-          <p>${character.name}</p>
-          <p> Powers:
-            ${character.powerstats} 
-          </p> 
-          <p>${character.known_for}</p>
-      </div>`)
-    }).join('')
-
-    return (allCharacters)
-  }
-
   Show.prototype.displayShow = function() {
     return `<div class="show-card column" id="${this.id}">
             <h4 class="show-title">${this.title}</h4><br></br>
             <img src="${this.image_url}">
             <br><br>
             <p style="font-size:12px;">${this.description}</p><br></br>
-            <button style="background-color:black; color:white;" class="characters-button">Meet the Characters</button>
           </div>`
   }
 
   function renderShows(data) {
     let showsIndex = document.getElementById("all-shows")
     data.forEach((show) => {
-      console.log(show)
       let newShow = new Show(show)
       showsIndex.innerHTML += newShow.displayShow()
-      showsIndex.innerHTML += newShow.displayCharacters()
     });
   }
