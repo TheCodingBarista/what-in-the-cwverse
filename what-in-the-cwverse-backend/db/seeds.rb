@@ -38,6 +38,7 @@ Character.destroy_all
             :name => response["results"]["real_name"],
             :alias => response["results"]["name"],
             :known_for => response["results"]["deck"],
+            :image_url => response["results"]["image"]["original_url"],
             :powerstats => arrow_powers
         )
     end
@@ -56,6 +57,7 @@ Character.destroy_all
             :name => response["results"]["real_name"],
             :alias => response["results"]["name"],
             :known_for => response["results"]["deck"],
+            :image_url => response["results"]["image"]["original_url"],
             :powerstats => flash_powers
         )
     end
@@ -74,6 +76,7 @@ Character.destroy_all
             :name => response["results"]["real_name"],
             :alias => response["results"]["name"],
             :known_for => response["results"]["deck"],
+            :image_url => response["results"]["image"]["original_url"],
             :powerstats => super_powers
         )
     end

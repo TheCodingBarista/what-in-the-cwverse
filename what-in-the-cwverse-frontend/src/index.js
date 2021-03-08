@@ -7,6 +7,7 @@ class Character {
       this.alias = data.alias;
       this.known_for = data.known_for;
       this.powerstats = data.powerstats;
+      this.image_url = data.image_url;
   }
 }
 
@@ -24,8 +25,10 @@ function getCharacters() {
 }
 
 Character.prototype.displayCharacters = function() {
-  return `<div>
+  return `<div class="card">
+  <br><br>
           <h4>${this.alias}</h4><br>
+          <img src="${this.image_url}">
           <p>${this.name}</p>
           <p> Powers:
             ${this.powerstats} 

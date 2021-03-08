@@ -48,3 +48,17 @@
       margin-bottom: 20px;
     }
   }
+
+
+  .cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+ }
+  
+ .card {
+     flex: 0 1 24%;
+     background-color: #00755E;
+     text-align: center;
+     border: 1px black solid;   
+ }
