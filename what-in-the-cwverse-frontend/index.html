@@ -97,23 +97,24 @@
   <main class="mt-5 pt-5">
     <div class="container">
       <iframe width="560" height="315" src="https://www.youtube.com/embed/fPZu3wmC6FE" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
     </div>
+
+
       <!--Section: Jumbotron-->
       <section class="card wow fadeIn" style="background-image: url(https://mdbootstrap.com/img/Photos/Others/background3.jpg)">
         <!-- Content -->
         <div class="card-body text-white text-center py-5 px-5 my-5">          
-          <h1 class="mb-4">
-            <strong>Welcome!</strong>
-          </h1>
-          <p class="mb-4">
-            <strong>Here to help you figure out who's who in the CWverse</strong>
-          </p>
-
-          <a target="_blank" href="https://github.com/TheCodingBarista/what-in-the-cwverse" class="btn btn-outline-white btn-lg">View this project on GitHub
-            <i class="fab fa-github mr-3"></i>
-          </a>
-
+        <div id="user-form">
+          <form>
+            <h5>Find Your Place in the Universe:</h5>
+            <br>
+            <input type="text" placeholder="flash@cwverse.net" name="email" id="user-email">
+            <br><br>
+            <input type="password" placeholder="Password" name="password" id="user-pwrd">
+            <br><br>
+            <input type="submit" style="background-color:black; color:white;" name="submit" value="Submit">         
+          </form>
+        </div>
         </div>
         <!-- Content -->
       </section>

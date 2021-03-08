@@ -16,6 +16,8 @@ document.addEventListener("DOMContentLoaded", () => {
   getCharacters();
 })
 
+
+
 function getCharacters() {
   fetch("http://localhost:3000/characters")
   .then(resp => resp.json())
@@ -27,6 +29,7 @@ Character.prototype.displayCharacters = function() {
           <br><br>
           <h4>${this.alias}</h4><br>
           <img src=${this.image_url}>
+          <br><br>
           <p>${this.name}</p>
           <p> Powers:
             ${this.powerstats} 
@@ -42,3 +45,20 @@ function renderCharacters(data) {
     allCharacters.innerHTML += newCharacter.displayCharacters()
   });
 }
+
+// function createUser() {
+
+//   const user = {
+//     email: document.getElementById('user-email').value,
+//     password: document.getElementById('user-pwrd').value,
+//   }
+
+//   fetch("http://localhost:3000/users", {
+//     method: 'POST',
+//     body: JSON.stringify(user),
+//     headers: {'Content-Type': 'application/json', 'Accept': 'application/json'}
+//   })
+//   .then(resp => resp.json())
+//   .then(data => obj = data)
+//   .then(() => console.log('Success:', obj))
+// }
