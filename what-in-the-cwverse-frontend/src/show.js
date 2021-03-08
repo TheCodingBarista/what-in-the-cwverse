@@ -3,7 +3,7 @@ class Show {
         this.id = data.id;
         this.title = data.title;
         this.description = data.description;
-        this.characters = data.characters;
+        //this.characters = data.characters;
         this.image_url = data.image_url;
     }
 }
@@ -12,7 +12,6 @@ function getShows() {
     fetch("http://localhost:3000/shows")
     .then(resp => resp.json())
     .then(data => renderShows(data))
-    //.then(data => console.log(data))
   }
   
   Show.prototype.displayShow = function() {

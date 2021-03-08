@@ -4,18 +4,16 @@ class Character {
   constructor(data) {
       this.id = data.id;
       this.name = data.name;
+      this.image_url = data.image_url;
       this.alias = data.alias;
       this.known_for = data.known_for;
       this.powerstats = data.powerstats;
-      this.image_url = data.image_url;
   }
 }
 
 document.addEventListener("DOMContentLoaded", () => {
   getShows();
   getCharacters();
-  renderShows();
-  renderCharacters();
 })
 
 function getCharacters() {
@@ -25,10 +23,10 @@ function getCharacters() {
 }
 
 Character.prototype.displayCharacters = function() {
-  return `<div class="card">
-  <br><br>
+  return `<div class="card column" id="${this.id}">
+          <br><br>
           <h4>${this.alias}</h4><br>
-          <img src="${this.image_url}">
+          <img src=${this.image_url}>
           <p>${this.name}</p>
           <p> Powers:
             ${this.powerstats} 

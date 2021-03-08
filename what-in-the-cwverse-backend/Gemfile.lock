@@ -231,6 +231,7 @@ PLATFORMS
 
 DEPENDENCIES
   active_model_serializers
+  bcrypt
   bootsnap (>= 1.4.2)
   byebug
   database_cleaner
