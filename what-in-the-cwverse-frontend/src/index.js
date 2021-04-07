@@ -1,5 +1,8 @@
 console.log("Yoooo, we in here");
 
+let userForm = document.querySelector("#user-form")
+let inputs = document.querySelectorAll(".form-input")
+
 class Character {
   constructor(data) {
       this.id = data.id;
@@ -26,7 +29,7 @@ Character.prototype.displayCharacters = function() {
   return `<div class="card column" id="${this.id}">
           <br><br>
           <h4>${this.alias}</h4><br>
-          <img src=${this.image_url}>
+          <img src="${this.image_url}">
           <p>${this.name}</p>
           <p> Powers:
             ${this.powerstats} 
@@ -42,3 +45,19 @@ function renderCharacters(data) {
     allCharacters.innerHTML += newCharacter.displayCharacters()
   });
 }
+
+  userForm.addEventListener("submit", function(e) {
+    e.preventDefault()
+    fetch("http://localhost:3000/users", {
+      method: 'POST',
+      headers: {'Content-Type': 'application/json', 'Accept': 'application/json'},
+      body: JSON.stringify({
+        user: {
+          email: inputs[0].value,
+          password: inputs[1].value
+        }
+      })
+    })
+    .then(resp => resp.json())
+    .then(data => obj = data)
+    .then(() => console.log('Success:', obj))  });
