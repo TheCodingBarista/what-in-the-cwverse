@@ -1,5 +1,7 @@
 class Show < ApplicationRecord
     has_many :characters
+    has_many :favorites
+    has_many :users, through: :favorites
 
     @show_ids = ["3", "430", "605", "616"]
 

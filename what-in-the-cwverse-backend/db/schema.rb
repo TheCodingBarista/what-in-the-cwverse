@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2021_04_07_033115) do
+ActiveRecord::Schema.define(version: 2021_04_07_181257) do
 
   create_table "characters", force: :cascade do |t|
     t.string "name"
@@ -22,6 +22,15 @@ ActiveRecord::Schema.define(version: 2021_04_07_033115) do
     t.text "powerstats"
     t.string "image_url"
     t.index ["show_id"], name: "index_characters_on_show_id"
+  end
+
+  create_table "favorites", force: :cascade do |t|
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.integer "user_id", null: false
+    t.integer "show_id", null: false
+    t.index ["show_id"], name: "index_favorites_on_show_id"
+    t.index ["user_id"], name: "index_favorites_on_user_id"
   end
 
   create_table "shows", force: :cascade do |t|
@@ -40,4 +49,6 @@ ActiveRecord::Schema.define(version: 2021_04_07_033115) do
   end
 
   add_foreign_key "characters", "shows"
+  add_foreign_key "favorites", "shows"
+  add_foreign_key "favorites", "users"
 end

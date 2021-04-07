@@ -2,7 +2,10 @@ console.log("Yoooo, we in here");
 
 let userForm = document.querySelector("#user-form")
 let inputs = document.querySelectorAll(".form-input")
-
+let currentUser
+let allCharacters = document.getElementById("all-characters")
+let favorites = document.querySelector("#user-favorites")
+let likeButton = document.querySelector(".like-button")
 class Character {
   constructor(data) {
       this.id = data.id;
@@ -42,7 +45,6 @@ Character.prototype.displayCharacters = function() {
 }
 
 function renderCharacters(data) {
-  let allCharacters = document.getElementById("all-characters")
   data.forEach((character) => {
     let newCharacter = new Character(character)
     allCharacters.innerHTML += newCharacter.displayCharacters()
@@ -53,7 +55,10 @@ function renderCharacters(data) {
     e.preventDefault()
     fetch("http://localhost:3000/users", {
       method: 'POST',
-      headers: {'Content-Type': 'application/json', 'Accept': 'application/json'},
+      headers: {
+        'Content-Type': 'application/json', 
+        'Accept': 'application/json'
+      },
       body: JSON.stringify({
         user: {
           email: inputs[0].value,
@@ -62,5 +67,30 @@ function renderCharacters(data) {
       })
     })
     .then(resp => resp.json())
-    .then(data => obj = data)
-    .then(() => console.log('Success:', obj))  });
+    .then(console.log("Success"))
+    .then(data => isLoggedIn(data))
+    })
+  
+  function isLoggedIn(object){
+    currentUser = object
+    getFavorites();
+  }
+
+  function getFavorites(){
+      fetch("http://localhost:3000/users/(${currentUser}.id)/favorites")
+      .then(resp => resp.json())
+      .then(favs => displayFavorites(favs))
+    }
+
+  function displayFavorites(favs){
+    favorites.innerHTML = `<h2>My Favorites</h2>`
+    favs.forEach(favorite => {
+      `<div class="show-card column" id="${this.id}">
+      <h4 class="show-title">${this.title}</h4><br></br>
+      <img src="${this.image_url}">
+      <br><br>
+      <p style="font-size:12px;">${this.description}</p><br></br>
+      <button fav-show-id=${favorite.show.id} class="like-button" style="color:red;">♡</button>
+      </div>`
+    })
+  }

@@ -20,7 +20,8 @@ function getShows() {
             <img src="${this.image_url}">
             <br><br>
             <p style="font-size:12px;">${this.description}</p><br></br>
-          </div>`
+            <button fav-show-id=${this.id} class="like-button">♡</button>
+            </div>`
   }
 
   function renderShows(data) {
