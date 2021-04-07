@@ -19,6 +19,8 @@ document.addEventListener("DOMContentLoaded", () => {
   getCharacters();
 })
 
+
+
 function getCharacters() {
   fetch("http://localhost:3000/characters")
   .then(resp => resp.json())
@@ -29,7 +31,12 @@ Character.prototype.displayCharacters = function() {
   return `<div class="card column" id="${this.id}">
           <br><br>
           <h4>${this.alias}</h4><br>
+<<<<<<< HEAD
           <img src="${this.image_url}">
+=======
+          <img src=${this.image_url}>
+          <br><br>
+>>>>>>> 16482af7590c5bfbd9906cfaf7946a15dd5943e8
           <p>${this.name}</p>
           <p> Powers:
             ${this.powerstats} 

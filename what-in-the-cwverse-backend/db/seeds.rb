@@ -16,8 +16,7 @@ Character.destroy_all
         show = Show.create!(
             :title => response["results"][0]["name"],
             :description => response["results"][0]["deck"] || response["results"][0]["description"],
-            :image_url => response["results"][0]["image"]["original_url"]
-        )
+            :image_url => response["results"][0]["image"]["original_url"]        )
     end
 
     @arrow_ids = ["5936", "2541", "86315"]
